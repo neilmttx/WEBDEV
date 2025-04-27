@@ -26,7 +26,7 @@
     h1 {
       margin: 0;
       color: #2c3e50;
-      font-size: 2rem; 
+      font-size: 2rem;
       font-weight: 700;
     }
 
@@ -41,7 +41,7 @@
     }
 
     h2 {
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
       color: #2c3e50;
       margin-bottom: 15px;
     }
@@ -54,7 +54,7 @@
     }
 
     input, select, textarea, button {
-      width: calc(100% - 10px);
+      width: 100%; 
       margin-bottom: 15px;
       padding: 10px;
       border: 1px solid #ddd;
@@ -99,7 +99,7 @@
     }
 
     tr:nth-child(even) {
-      background-color: #f9f9f9; 
+      background-color: #f9f9f9;
     }
 
     .rating-container {
@@ -114,17 +114,13 @@
       align-items: center;
     }
 
-    @media (max-width: 768px) {
-      body {
-        padding: 10px;
-      }
+    .table-container {
+      overflow-x: auto; 
+    }
 
+    @media (max-width: 768px) {
       section {
         padding: 15px;
-      }
-
-      input, select, textarea, button {
-        font-size: 0.9rem;
       }
 
       h1 {
@@ -143,8 +139,12 @@
         padding: 8px;
       }
 
+      input, select, textarea, button {
+        font-size: 0.9rem;
+      }
+
       .rating-container {
-        flex-direction: column;
+        flex-direction: column; 
         gap: 10px;
       }
     }
@@ -214,44 +214,46 @@
 
   <section>
     <h2>Survey Results</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Grade & Section</th>
-          <th>Subject</th>
-          <th>Teacher Rating</th>
-          <th>Favorite Lesson</th>
-          <th>Suggestions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Anonymous</td>
-          <td>Grade 7-A</td>
-          <td>Math</td>
-          <td>⭐</td>
-          <td>Algebra</td>
-          <td>Magulo magturo!</td>
-        </tr>
-        <tr>
-          <td>Paulo Sins</td>
-          <td>Grade 8-B</td>
-          <td>English</td>
-          <td>⭐⭐⭐⭐⭐</td>
-          <td>Grammar rules</td>
-          <td>Excellent teaching!</td>
-        </tr>
-        <tr>
-          <td>Panert Sison</td>
-          <td>Grade 8-B</td>
-          <td>Science</td>
-          <td>⭐⭐⭐</td>
-          <td>Planets</td>
-          <td>Ang galing mo po <3</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Grade & Section</th>
+            <th>Subject</th>
+            <th>Teacher Rating</th>
+            <th>Favorite Lesson</th>
+            <th>Suggestions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anonymous</td>
+            <td>Grade 7-A</td>
+            <td>Math</td>
+            <td>⭐</td>
+            <td>Algebra</td>
+            <td>Magulo magturo!</td>
+          </tr>
+          <tr>
+            <td>Paulo Sins</td>
+            <td>Grade 8-B</td>
+            <td>English</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>Grammar rules</td>
+            <td>Excellent teaching!</td>
+          </tr>
+          <tr>
+            <td>Panert Sison</td>
+            <td>Grade 8-B</td>
+            <td>Science</td>
+            <td>⭐⭐⭐</td>
+            <td>Planets</td>
+            <td>Ang galing mo po <3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 </body>
 </html>
