@@ -54,7 +54,7 @@
     }
 
     input, select, textarea, button {
-      width: 95%; 
+      width: 100%; 
       margin-bottom: 15px;
       padding: 10px;
       border: 1px solid #ddd;
@@ -83,15 +83,17 @@
 
     .rating-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap; 
       gap: 10px; 
       align-items: center;
     }
 
-    .rating-option {
-      display: flex;
-      align-items: center;
-      width: 45%; 
+    .rating-container input {
+      margin-right: 5px; 
+    }
+
+    .rating-container label {
+      margin-right: 15px;
     }
 
     .table-container {
@@ -149,10 +151,6 @@
         flex-direction: column; 
         gap: 10px;
       }
-
-      .rating-option {
-        width: 100%; 
-      }
     }
   </style>
 </head>
@@ -181,26 +179,16 @@
 
       <label>Teacher Rating (1-5 ⭐):</label>
       <div class="rating-container">
-        <div class="rating-option">
-          <input type="radio" id="star1" name="rating" value="1">
-          <label for="star1">⭐</label>
-        </div>
-        <div class="rating-option">
-          <input type="radio" id="star2" name="rating" value="2">
-          <label for="star2">⭐⭐</label>
-        </div>
-        <div class="rating-option">
-          <input type="radio" id="star3" name="rating" value="3">
-          <label for="star3">⭐⭐⭐</label>
-        </div>
-        <div class="rating-option">
-          <input type="radio" id="star4" name="rating" value="4">
-          <label for="star4">⭐⭐⭐⭐</label>
-        </div>
-        <div class="rating-option">
-          <input type="radio" id="star5" name="rating" value="5">
-          <label for="star5">⭐⭐⭐⭐⭐</label>
-        </div>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1">⭐</label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2">⭐⭐</label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3">⭐⭐⭐</label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4">⭐⭐⭐⭐</label>
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5">⭐⭐⭐⭐⭐</label>
       </div>
 
       <label for="lesson">Favorite Lesson:</label>
