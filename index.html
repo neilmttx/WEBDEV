@@ -80,6 +80,22 @@
       background: #2980b9;
     }
 
+    .rating-container {
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 10px;
+      align-items: center;
+    }
+
+    .rating-option {
+      display: flex;
+      align-items: center;
+    }
+
+    .table-container {
+      overflow-x: auto; 
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -100,22 +116,6 @@
 
     tr:nth-child(even) {
       background-color: #f9f9f9;
-    }
-
-    .rating-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .rating-option {
-      display: flex;
-      align-items: center;
-    }
-
-    .table-container {
-      overflow-x: auto; 
     }
 
     @media (max-width: 768px) {
